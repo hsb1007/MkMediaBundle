@@ -35,7 +35,7 @@ class MediasController extends Controller
             'url'=>$editor == "true" ? ['model'=>$model,'bundle'=>$bundle,'model_id'=>$model_id,'mode'=>'true'] : ['model'=>$model,'bundle'=>$bundle,'model_id'=>$model_id]
         ];
         $form = $this->createForm(
-            new MediaType(),
+            'Mykees\MediaBundle\Form\Type\MediaType',
             new Media,
             [
                 'action' => $this->generateUrl('mykees_media_add',$params['url']),

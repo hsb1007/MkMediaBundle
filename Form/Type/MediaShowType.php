@@ -9,6 +9,7 @@
 namespace Mykees\MediaBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
@@ -21,10 +22,10 @@ class MediaShowType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name','text',[
+            ->add('name',TextType::class,[
                 "label"=>"Nom de l'image"
             ])
-            ->add('file','text',[
+            ->add('file',TextType::class,[
                 "label"=>"Chemin de l'image"
             ])
         ;

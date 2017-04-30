@@ -7,6 +7,7 @@
  */
 
 namespace Mykees\MediaBundle\Twig\Extension;
+use Doctrine\Common\Util\Debug;
 use Mykees\MediaBundle\Interfaces\Mediable;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Mykees\MediaBundle\Util\Reflection;
@@ -53,7 +54,7 @@ class UploaderExtension extends \Twig_Extension
                 'model_id'=> $model_id
             ]);
 
-            return '<iframe src="'.$url.'" style="width:100%;border: none;min-height:100%;" class="iframe-uploader"></iframe>';
+            return '<iframe src="'.$url.'" style="width:100%;border: none;min-height:800px;" class="iframe-uploader"></iframe>';
         }else{
 
             return '<h3 style="font-weight: bold;text-align: center;color:#777">The <span style="color:#DD6F6F;border-bottom:2px dashed #777;">ID</span> from your entity <span style="color:#DD6F6F;border-bottom:2px dashed #777;">'.$model.'</span> is required to use the uploader</h3>';

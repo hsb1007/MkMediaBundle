@@ -9,6 +9,8 @@
 namespace Mykees\MediaBundle\Util;
 
 
+use Doctrine\Common\Util\Debug;
+
 class Reflection {
 
 
@@ -38,8 +40,6 @@ class Reflection {
 
     public static function getShortBundleRepository ( $model  ){
         $explode = explode('\\', self::getClassName($model ));
-        return $explode[0].$explode[1];
+        return $explode[0];
     }
-
-
-} 
+}
