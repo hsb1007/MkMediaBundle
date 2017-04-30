@@ -3,7 +3,7 @@
     <div class="content" style="padding:0 ">
         <div class="wrap">
             <div class="page-title"> <i class="fa fa-pencil"></i>
-                <h3><span class="semi-bold">Détails</span></h3>
+                <h3><span class="semi-bold">Details</span></h3>
             </div>
 
             <div class="row" id="wrapper-row">
@@ -32,28 +32,28 @@
                         {{ form_row(form.file,{'attr': { 'class':'form-control' }} ) }}
                     </div>
                     <input type="hidden" name="model" value="{{ model }}"/>
-                    <label><strong>Alignement : </strong></label>
+                    <label><strong>Alignment : </strong></label>
                     <div class="radio-group">
                         <input type="radio" name="align" class="align" id="align-none-up" value="none">
-                        <label for="align-none-up" class="radio-label">Sans alignement</label>
+                        <label for="align-none-up" class="radio-label">No alignment</label>
                     </div>
 
                     <div class="radio-group">
                         <input type="radio" name="align" class="align" id="align-left-up" value="align-left" {% if class is defined and class == "align-left" %}checked{% endif %}>
-                        <label for="align-left-up" class="radio-label">Aligner à gauche</label>
+                        <label for="align-left-up" class="radio-label">Left</label>
                     </div>
 
                     <div class="radio-group">
                         <input type="radio" name="align" class="align" id="align-center-up" value="align-center" {% if class is defined and class == "align-center"  %}checked{% endif %}>
-                        <label for="align-center-up" class="radio-label">Aligner au centre</label>
+                        <label for="align-center-up" class="radio-label">Center</label>
                     </div>
 
                     <div class="radio-group">
                         <input type="radio" name="align" class="align" id="align-right-up" value="align-right" {% if class is defined and class == "align-right"  %}checked{% endif %}>
-                        <label for="align-right-up" class="radio-label">Aligner à droite</label>
+                        <label for="align-right-up" class="radio-label">Right</label>
                     </div>
                     <div class="clearfix"></div>
-                    <input type="submit" class="btn btn-success btn-cons" value="Insérer dans l'article"/>
+                    <input type="submit" class="btn btn-success btn-cons" value="Submit"/>
 
                     {{ form_end(form) }}
                 </div>

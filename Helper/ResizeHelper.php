@@ -36,7 +36,6 @@ class ResizeHelper {
             {
                 foreach($this->options['size'] as $k=>$v)
                 {
-                    Debug::dump($v);
                     $width = $v['width'];
                     $height = $v['height'];
                     $dest = $absolute_info['dirname'] . '/' . $absolute_info['filename'] . "_$width" . "x$height" . '.jpg';

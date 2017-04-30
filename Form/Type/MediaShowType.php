@@ -23,10 +23,10 @@ class MediaShowType extends AbstractType
     {
         $builder
             ->add('name',TextType::class,[
-                "label"=>"Nom de l'image"
+                "label"=>"Name of image"
             ])
             ->add('file',TextType::class,[
-                "label"=>"Chemin de l'image"
+                "label"=>"File name of image"
             ])
         ;
     }

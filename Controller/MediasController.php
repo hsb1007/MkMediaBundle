@@ -154,7 +154,7 @@ class MediasController extends Controller
             ];
         }
         $form = $this->createForm(
-            new MediaShowType(),
+            'Mykees\MediaBundle\Form\Type\MediaShowType',
             $params['media'],
             [
                 'action' => $this->generateUrl('mykees_media_show',['model'=>$model,'id'=>$id]),
