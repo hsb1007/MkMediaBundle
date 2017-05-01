@@ -7,7 +7,6 @@
  */
 
 namespace Mykees\MediaBundle\Twig\Extension;
-use Doctrine\Common\Util\Debug;
 use Mykees\MediaBundle\Interfaces\Mediable;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Mykees\MediaBundle\Util\Reflection;

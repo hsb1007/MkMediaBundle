@@ -140,6 +140,7 @@ class MediasController extends Controller
      */
     public function showAction( $model=null, $id = null, Request $request )
     {
+
         if( !$id )
         {
             $params = [
@@ -164,6 +165,10 @@ class MediasController extends Controller
         if($request->getMethod() == "POST")
         {
             $media = $request->request->all();
+
+            if(!array_key_exists('align',$media))
+                $media['align'] = 'none';
+
             return $this->render('MykeesMediaBundle:Media:tinymce.html.twig',['media'=>$media]);
         }
 

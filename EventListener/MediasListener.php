@@ -38,10 +38,22 @@ class MediasListener
         }
     }
 
+    public function postLoad(LifecycleEventArgs $args) {
+        $model = $args->getEntity();
+
+        if($model instanceof Mediable)
+        {
+            $manager = new MediaManager($this->managerRegistry,$this->rootDir,$this->resize_parameters);
+            $manager->findMedias($model);
+
+        }
+    }
+
     public function getSubscribedEvents()
     {
         return [
-            Events::preRemove
+            Events::preRemove,
+            Events::postLoad,
         ];
     }
 }

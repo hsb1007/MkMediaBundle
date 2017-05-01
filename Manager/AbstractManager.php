@@ -55,7 +55,9 @@ abstract class AbstractManager {
 
     public function addMedia($media, Mediable $model)
     {
+
         $model->getMedias()->add($media);
+
     }
 
     public function addMedias(array $medias, Mediable $model)
@@ -63,14 +65,18 @@ abstract class AbstractManager {
         foreach($medias as $media){
             if(!empty($media) && Reflection::getClassShortName($media) == 'Media'){
                 $this->addMedia($media,$model);
+
             }
         }
+
     }
 
     public function refreshMedias(array $medias, Mediable $model)
     {
+
         $model->getMedias()->clear();
         $this->addMedias($medias,$model);
+
     }
 
     public function clean(array $models)

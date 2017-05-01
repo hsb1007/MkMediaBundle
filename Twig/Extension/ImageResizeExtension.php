@@ -9,6 +9,7 @@
 namespace Mykees\MediaBundle\Twig\Extension;
 
 
+
 class ImageResizeExtension extends \Twig_Extension
 {
     public $rootDir;
@@ -29,6 +30,7 @@ class ImageResizeExtension extends \Twig_Extension
 
     public function getImage($image, $width, $height, $options=[])
     {
+
         $attr = false;
         foreach($options as $k=>$opt)
         {

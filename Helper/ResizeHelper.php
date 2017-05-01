@@ -8,7 +8,6 @@
 
 namespace Mykees\MediaBundle\Helper;
 
-use Doctrine\Common\Util\Debug;
 use Imagine\Image\ImageInterface;
 
 class ResizeHelper {

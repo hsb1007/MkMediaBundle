@@ -9,7 +9,6 @@
 namespace Mykees\MediaBundle\Util;
 
 
-use Doctrine\Common\Util\Debug;
 
 class Reflection {
 
