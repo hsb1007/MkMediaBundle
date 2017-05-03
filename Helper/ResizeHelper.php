@@ -18,7 +18,7 @@ class ResizeHelper {
 
     public function __construct(array $resize_option, $webroot){
         $this->options = $resize_option;
-        $this->webroot = $webroot.'/img/';
+        $this->webroot = $webroot.'/uploads/media/';
     }
 
 

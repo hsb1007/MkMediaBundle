@@ -30,7 +30,7 @@ class MediaManager extends AbstractManager
 
     public function webroot()
     {
-        return $this->rootDir . '/../web/img/';
+        return $this->rootDir . '/../web/uploads/media/';
     }
 
     /**

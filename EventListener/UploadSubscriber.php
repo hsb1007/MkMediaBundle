@@ -51,7 +51,7 @@ class UploadSubscriber implements EventSubscriberInterface {
         {
             //create dir
             $webroot = $event->getRootDir().'/../web';
-            $dir = $webroot.'/img';
+            $dir = $webroot.'/uploads/media';
 
             if(!file_exists($dir)){mkdir($dir,0777);}
 
@@ -134,9 +134,9 @@ class UploadSubscriber implements EventSubscriberInterface {
         if($count > 0){
             $f = explode('.',$filename);
             $file = $f[0].'_'.$count.'.'.end($f);
-            $filePath = $webroot.'/img/'.date('Y').'/'.date('m').'/'.$file;
+            $filePath = $webroot.'/uploads/media/'.date('Y').'/'.date('m').'/'.$file;
         }
-        $filePath = !$filePath ? $webroot.'/img/'.date('Y').'/'.date('m').'/'.$file : $filePath;
+        $filePath = !$filePath ? $webroot.'/uploads/media/'.date('Y').'/'.date('m').'/'.$file : $filePath;
         if(file_exists($filePath))
         {
             $count++;

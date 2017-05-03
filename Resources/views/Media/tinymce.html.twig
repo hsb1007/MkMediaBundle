@@ -6,9 +6,9 @@
     {% set imageExtension = ['jpg','JPG','jpeg',"JPEG",'png','PNG','gif','GIF'] %}
 
     {% if ext[1] in imageExtension %}
-    var html = '<img src="{{ asset('img/'~media['media_show']['file']) }}" alt="{{ media['media_show']['name'] }}" class="{{ media['align'] }}">';
+    var html = '<img src="{{ asset('uploads/media/'~media['media_show']['file']) }}" alt="{{ media['media_show']['name'] }}" class="{{ media['align'] }}">';
     {% else %}
-    var html = '<a href="{{ asset('img/'~media['media_show']['file']) }}" target="_blank" class="mk_doc_{{ media['media_show']['name'] }}">{{ media['media_show']['name'] }}</a>'
+    var html = '<a href="{{ asset('uploads/media/'~media['media_show']['file']) }}" target="_blank" class="mk_doc_{{ media['media_show']['name'] }}">{{ media['media_show']['name'] }}</a>'
     {% endif %}
 
     win.send_to_editor(html);

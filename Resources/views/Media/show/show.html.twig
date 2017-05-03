@@ -12,7 +12,7 @@
                     {% set imageExtension = ['jpg','JPG','jpeg',"JPEG",'png','PNG','gif','GIF'] %}
 
                     {% if ext[1] in imageExtension %}
-                        <img src="{{ asset('img/'~media.file) }}" alt="" style="width:400px;"/>
+                        <img src="{{ asset('uploads/media/'~media.file) }}" alt="" style="width:400px;"/>
                     {% elseif ext[1] == "pdf" %}
                         <img src="{{ asset('bundles/mykeesmedia/images/pdf.jpg') }}" alt="" style="width:200px;">
                     {% elseif ext[1] == "txt" %}

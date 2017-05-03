@@ -88,7 +88,7 @@ class MediasController extends Controller
             }else{
                 $response = new Response();
                 $response->setContent(json_encode(array(
-                    'error'=>"Le format n'est pas valid"
+                    'error'=>"Invalid format"
                 )));
                 $response->headers->set('Content-Type', 'application/json');
                 $response->setStatusCode(500);
